@@ -1329,7 +1329,15 @@
 				<key>Path</key>
 				<string>NvmExpressDxe.efi</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
+				<key>Arguments</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>Path</key>
+				<string>SataController.efi</string>
+				<key>Enabled</key>
+				<true/>
 				<key>Arguments</key>
 				<string></string>
 			</dict>

@@ -6,7 +6,7 @@
 
 Type|Item
 :----|:----
-**HDD** | SATA SSD
+**HDD** | Apple SSD (PCIe/Sata)
 **GPU** | AMD RX560
 **WiFi + BT Combo** | BCM943602CS + PCIe Adaptor
 
