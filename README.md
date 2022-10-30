@@ -1,4 +1,4 @@
-# Hackintosh Monterey Guide for HP 6300 Pro / HP Elite 8300 (OpenCore 0.7.4)
+# Hackintosh Monterey / Ventura for HP 6300 Pro / HP Elite 8300 (OpenCore 0.8.5)
 
 ![Snapshot](images/snapshot.png)
 
@@ -10,28 +10,15 @@ Type|Item
 **GPU** | AMD RX560
 **WiFi + BT Combo** | BCM943602CS + PCIe Adaptor
 
-### Current Driver Versions
-Driver Name|Version
-:----|:----
-Lilu | 1.5.6
-WhateverGreen | 1.5.4
-AppleALC | 1.6.5 (modified)
-VirtualSMC | 1.2.7
-IntelMausi | 1.0.7
-
-## Instructions
-### 1. Prepare installation media 
-https://dortania.github.io/OpenCore-Install-Guide/extras/big-sur/  
-https://dortania.github.io/OpenCore-Install-Guide/extras/monterey.html
-### 2. Modify 'config.plist' for your own serial number, UUID, MLB, ROM, etc.
-### 3. Copy 'BOOT' and 'OC' directories to the EFI partition of the USB disk.
-### 4. Optional Settings
+## Notes
+1. For MacOS Ventura, SIP and Secure boot is disabled in the 'config.plist' since you'll need post installation. Please refer to: https://dortania.github.io/OpenCore-Legacy-Patcher/
+2. For Moterey and older, please use the 'config.Pre-Ventura.plist', in which SIP is enabled.
+3. Modify 'config.plist' for your own serial number, UUID, MLB, ROM, etc.
+4. To use NVMe or Apple PCIe SSD, you have to use a USB disk for boot. Copy 'BOOT' and 'OC' directories to the EFI partition of the USB disk.
+5. Optional Settings
 * Change SSDT.aml for CPU PM according to your own CPU. Current one is for i7 3770.
 [See the Guide](https://github.com/Piker-Alpha/ssdtPRGen.sh)
-* Configure IGPU if you don't use dGPU (IGPU has not been supported in Monterey).
-* For nVidia Kepler GPU in Monterey, please refer to:
-https://github.com/chris1111/Geforce-Kepler-patcher
-* Configure NVMe if you use NVMe adaptor.
+* Configure IGPU if you don't use dGPU.
 
 ## References:
 https://github.com/Sniki/HP6300-HP8300  
